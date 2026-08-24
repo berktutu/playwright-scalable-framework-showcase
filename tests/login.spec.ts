@@ -14,7 +14,7 @@ test("User can login with valid credentials", async ({ page }) => {
 
   await page.getByRole("button", { name: "Login" }).click();
 
-  await expect(page.getByRole("heading", { name: "My account" })).toBeVisible();
+  await expect(page).toHaveURL(/\/account/);
 });
 
 // As the login test was already done by user perspective, here the authentication is handled through the API and a custom fixture so the test can focus directly navigating to the user profile.

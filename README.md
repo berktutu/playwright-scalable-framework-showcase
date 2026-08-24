@@ -23,24 +23,35 @@ Executed tests are selected selectively to showcase this structure with 3 test c
 
 ## Project Structure
 
+```text
 api/        → API request
 fixtures/   → Custom Playwright fixtures
 pages/      → Page Object Models
 tests/      → Executed tests
 utils/      → Reusable utility
-
+```
 ## Credentials Storage
 
 "Sensitive credentials" are stored using GitHub Actions Secrets.
+```yaml
 USER_EMAIL: ${{ secrets.USER_EMAIL }}
 USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+```
 
 ## Run This Project
 
+```bash
 npm install
+```
 
+```bash
 npx playwright install
+```
 
-Note: Create .env file according to the .env.template to see what is required.
+Note: Create a `.env` file based on `.env.template`.
 
-Run the tests with: npx playwright test
+Run the tests:
+
+```bash
+npx playwright test
+```
